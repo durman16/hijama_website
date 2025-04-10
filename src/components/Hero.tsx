@@ -1,11 +1,22 @@
-export default function Hero() {
+const Hero = () => {
     return (
-      <section className="text-center py-12 px-4">
-        <h2 className="text-4xl font-semibold mb-4">Natural Healing with Sunnah</h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Experience the benefits of cupping therapy (Hijama) with certified practitioners in a calm, clean, and professional environment.
-        </p>
+      <section
+        className="relative h-[80vh] bg-center bg-cover"
+        style={{ backgroundImage: "url('/images/hijama01.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+          <div className="text-center px-4 text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down">
+              Natural Healing with <span className="text-yellow-300">Hijama</span>
+            </h1>
+            <p className="text-lg md:text-xl max-w-xl mx-auto animate-fade-in-up">
+              Book a professional session in Ottawa. Clean. Sunnah-based. Holistic.
+            </p>
+          </div>
+        </div>
       </section>
     );
-  }
+  };
+  
+  export default Hero;
   

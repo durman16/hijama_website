@@ -1,19 +1,21 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import ServicesSection from "@/components/ServicesSection";
-import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Benefits from "@/components/Benefits";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="bg-green-100 min-h-screen text-gray-800">
+    <main className="bg-green-50 text-gray-800">
       <Header />
-      <main>
-        <Hero />
-        <ServicesSection />
-        <CallToAction />
-      </main>
+      <Hero />
+      <About />
+      <Services />
+      <Benefits />
+      <Contact />
       <Footer />
-    </div>
+    </main>
   );
 }
