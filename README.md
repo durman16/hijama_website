@@ -1,1 +1,0 @@
-# hijama_website
