@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-[80vh] bg-center bg-cover transition-all duration-1000 ease-in-out"
+      className="relative h-[80vh] bg-center bg-cover transition-all duration-1500 ease-in-out"
       style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
     >
       {/* Overlay */}

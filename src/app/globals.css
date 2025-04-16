@@ -40,7 +40,7 @@ body {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -72,17 +72,17 @@ body {
 
 /* Define animation classes */
 .animate-fade-in-up {
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp 1.5s ease-out;
 }
 
 .animate-fade-in-down {
-  animation: fadeInDown 1s ease-out;
+  animation: fadeInDown 1.5s ease-out;
 }
 
 .animate-slide-in-down {
-  animation: slide-in-down 1s ease-out forwards;
+  animation: slide-in-down 1.5s ease-out forwards;
 }
 
 .animate-slide-in-up {
-  animation: slide-in-up 1s ease-out forwards;
+  animation: slide-in-up 1.5s ease-out forwards;
 }
