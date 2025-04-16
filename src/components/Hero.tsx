@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-      <section
+      <section id='hero'
         className="relative h-[80vh] bg-center bg-cover"
         style={{ backgroundImage: "url('/images/hijama01.jpg')" }}
       >
