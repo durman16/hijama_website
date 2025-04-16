@@ -68,21 +68,6 @@ const Hero = () => {
          </div>
     </div>
 
-
-      {/* Sol & sağ oklar */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black"
-      >
-        <ChevronLeft size={24} />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black"
-      >
-        <ChevronRight size={24} />
-      </button>
-
       {/* Dot navigation */}
       <div className="absolute bottom-6 w-full flex justify-center space-x-2">
         {slides.map((_, i) => (

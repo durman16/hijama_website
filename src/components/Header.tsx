@@ -10,7 +10,7 @@ const Header = () => {
       <header className="fixed top-0 left-0 w-full bg-green-700 text-white py-4 px-4 shadow-md z-50">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">
-            <a href="#hero">Otaci | Holistic Hijama & Wellness</a>
+            <a href="#">Otaci | Holistic Hijama & Wellness</a>
           </h1>
   
           {/* Hamburger ikonu - sadece mobilde görünür */}
@@ -29,9 +29,9 @@ const Header = () => {
             `}
           >
             <a href="#about" className="hover:underline" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="#services" className="hover:underline" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="#benefits" className="hover:underline" onClick={() => setMenuOpen(false)}>Benefits</a>
-            <a href="#contact" className="hover:underline" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="#services" className="hover:underline" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="#FAQ" className="hover:underline" onClick={() => setMenuOpen(false)}>FAQ</a>
   
             <a
               href="#contact"

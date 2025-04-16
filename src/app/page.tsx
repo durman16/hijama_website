@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
 import Contact from "@/components/Contact";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <Services />
       <Benefits />
+      <Services />
       <Contact />
+      <FAQ />
       <Footer />
     </main>
   );
