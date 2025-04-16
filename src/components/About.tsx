@@ -17,7 +17,7 @@ export default function About() {
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-gray-700">
                 Hijama (cupping therapy) is an ancient healing practice with roots in prophetic medicine and traditional holistic therapies. 
-                This evidence-based treatment uses controlled suction to promote detoxification, improve circulation, and stimulate the body's 
+                This evidence-based treatment uses controlled suction to promote detoxification, improve circulation, and stimulate the body&apos;s 
                 natural healing processes.
               </p>
               
