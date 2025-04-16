@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
@@ -38,14 +38,14 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Önceki / Sonraki Butonlar
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+//   // Önceki / Sonraki Butonlar
+//   const prevSlide = () => {
+//     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+//   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+//   const nextSlide = () => {
+//     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+//   };
 
   return (
     <section
