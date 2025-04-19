@@ -9,9 +9,13 @@ const Header = () => {
     return (
       <header className="fixed top-0 left-0 w-full bg-green-700 text-white py-4 px-4 shadow-md z-50">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">
-            <a href="#">Otaci | Holistic Hijama & Wellness</a>
-          </h1>
+        <h1 className="text-center md:text-left text-xl sm:text-2xl font-bold break-words">
+          <a href="#">
+            <span className="hidden sm:inline">Otaci | </span>
+            <span className="block sm:inline">Holistic Hijama & Wellness</span>
+          </a>
+        </h1>
+
   
           {/* Hamburger ikonu - sadece mobilde görünür */}
           <div className="md:hidden">

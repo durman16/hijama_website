@@ -1,4 +1,17 @@
+'use client';
+import { useState } from 'react';
+
 export default function Contact() {
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form submitted");
+    setSubmitted(true); // Form gönderildikten sonra formu değiştir
+  };
+  
+
   return (
     <section id="contact" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -64,7 +77,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">WhatsApp</h4>
-                  <a href="https://wa.me/16138780458" className="text-emerald-600 hover:text-emerald-700 hover:underline">Chat with us on WhatsApp</a>
+                  <a href="https://wa.me/16138780458?text=Merhaba%2C%20Hijama%20randevusu%20almak%20istiyorum." className="text-emerald-600 hover:text-emerald-700 hover:underline">Chat with us on WhatsApp</a>
                 </div>
               </div>
             </div>
@@ -74,78 +87,86 @@ export default function Contact() {
         {/* Contact Form - Now displayed below */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-emerald-50 p-8 rounded-xl shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h3>
-            
-            <form className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              {submitted ? "Thank You!" : "Send Us a Message"}
+            </h3>
+
+            {submitted ? (
+              <p className="text-center text-lg text-gray-700">
+                Thank you for contacting us! We will get back to you shortly.
+              </p>
+            ) : (
+              <form className="space-y-5" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      placeholder="Your name" 
+                      className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      placeholder="your@email.com" 
+                      className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      placeholder="+1 (___) ___-____" 
+                      className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+                    <select 
+                      id="service" 
+                      className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="wet-cupping">Wet Cupping (Hijama)</option>
+                      <option value="dry-cupping">Dry Cupping</option>
+                      <option value="head-neck">Head & Neck Therapy</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    placeholder="Your name" 
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                  <textarea 
+                    id="message" 
+                    placeholder="How can we help you?" 
                     className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
                     required
-                  />
+                  ></textarea>
                 </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    placeholder="your@email.com" 
-                    className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    placeholder="+1 (___) ___-____" 
-                    className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
-                  <select 
-                    id="service" 
-                    className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="wet-cupping">Wet Cupping (Hijama)</option>
-                    <option value="dry-cupping">Dry Cupping</option>
-                    <option value="head-neck">Head & Neck Therapy</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                <textarea 
-                  id="message" 
-                  placeholder="How can we help you?" 
-                  className="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition"
-                  required
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit" 
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg"
-              >
-                Send Message
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </form>
+                <button 
+                  type="submit" 
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg"
+                >
+                  Send Message
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

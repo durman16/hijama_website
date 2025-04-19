@@ -47,7 +47,7 @@ export default function About() {
           <div className="mt-20 grid md:grid-cols-3 gap-8 text-center">
             {[
               {icon: '🌿', title: 'Holistic Approach', desc: 'Addresses body, mind & spirit'},
-              {icon: '⚕️', title: 'Prophetic Tradition', desc: 'Rooted in authentic Sunnah'},
+              {icon: '✨', title: 'Prophetic Tradition', desc: 'Rooted in authentic Sunnah'},
               {icon: '🔬', title: 'Evidence-Based', desc: 'Supported by modern research'}
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-50">
