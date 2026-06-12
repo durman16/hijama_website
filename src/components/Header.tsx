@@ -11,7 +11,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-center md:text-left text-xl sm:text-2xl font-bold break-words">
           <a href="#">
-            <span className="hidden sm:inline">Otaci | </span>
+            <span className="hidden sm:inline">ShifaSana | </span>
             <span className="block sm:inline">Holistic Hijama & Wellness</span>
           </a>
         </h1>
