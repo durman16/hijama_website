@@ -13,8 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.shifasana.ca"),
   title: "ShifaSana | Holistic Hijama & Wellness — Ottawa",
   description: "Professional Hijama (cupping therapy) in Ottawa. Sunnah-based, evidence-backed, hygienic sessions. Book online today.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "ShifaSana | Holistic Hijama & Wellness — Ottawa",
+    description: "Professional Hijama (cupping therapy) in Ottawa. Sunnah-based, evidence-backed, hygienic sessions. Book online today.",
+    url: "https://www.shifasana.ca",
+    siteName: "ShifaSana",
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ShifaSana | Holistic Hijama & Wellness — Ottawa",
+    description: "Professional Hijama (cupping therapy) in Ottawa. Sunnah-based, evidence-backed, hygienic sessions. Book online today.",
+  },
 };
 
 export default function RootLayout({
