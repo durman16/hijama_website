@@ -2,7 +2,7 @@ const services = [
   {
     title: "Wet Cupping (Hijama)",
     description: "Traditional prophetic therapy using controlled suction and minor incisions to extract toxins and promote deep healing.",
-    icon: "💧",
+    icon: "🩸",
     highlight: "Most Popular",
     pricing: "From $45 (3 cups) — up to $160 (18 cups)"
   },
