@@ -9,7 +9,7 @@ const services = [
   {
     title: "Dry Cupping Therapy",
     description: "Non-invasive suction technique to relieve muscle tension, improve circulation, and reduce pain without incisions.",
-    icon: "🧿",
+    icon: "🍃",
     pricing: "From $45 (3 cups) — up to $160 (18 cups)"
   },
   {
