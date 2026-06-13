@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import CalendarButton from './CalendarButton';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const trustBadges = [
   { icon: '🏅', label: 'Licensed & Certified Practitioner' },
@@ -12,17 +12,21 @@ const trustBadges = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSending(true);
+    setError(false);
     emailjs.sendForm(
       'service_4ola18j',
       'template_h9vrkd8',
       e.currentTarget,
-      'RPBSKMewac3d2Pqnt'
+      { publicKey: 'RPBSKMewac3d2Pqnt' }
     ).then(
-      (result) => { console.log('Email sent!', result.text); setSubmitted(true); },
-      (error) => { console.error('Email failed...', error.text); }
+      () => { setSubmitted(true); setSending(false); },
+      () => { setError(true); setSending(false); }
     );
   };
 
@@ -240,9 +244,12 @@ export default function Contact() {
                     required />
                 </div>
 
-                <button type="submit"
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-emerald-200 text-lg">
-                  Send Message →
+                {error && (
+                  <p className="text-red-600 text-sm text-center">Something went wrong. Please try again or contact us via WhatsApp.</p>
+                )}
+                <button type="submit" disabled={sending}
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-emerald-200 text-lg">
+                  {sending ? 'Sending...' : 'Send Message →'}
                 </button>
               </form>
             )}
