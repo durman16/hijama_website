@@ -228,7 +228,7 @@ export default function Contact() {
                       <option value="total-reset">Total Reset (18 Cups) — $160</option>
                       <option value="fire-cupping">Full Back Fire Cupping — $60</option>
                       <option value="head-neck">Head & Neck Therapy</option>
-                      <option value="massage">Non-Therapeutic Massage</option>
+                      <option value="massage">Relaxation Bodywork</option>
                     </select>
                   </div>
                 </div>

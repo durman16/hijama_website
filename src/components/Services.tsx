@@ -20,8 +20,8 @@ const services = [
     pricing: "$60"
   },
   {
-    title: "Non-Therapeutic Massage",
-    description: "A full-body relaxation massage to ease muscle tension, reduce stress, and promote a sense of calm and well-being.",
+    title: "Relaxation Bodywork",
+    description: "A full-body relaxation session focused on relieving everyday stress and promoting a sense of calm and well-being. This is a wellness service only — not massage therapy as regulated by the CMTO.",
     icon: "🌿",
     pricing: "Contact us for pricing"
   }
